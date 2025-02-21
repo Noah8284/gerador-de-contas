@@ -1,6 +1,7 @@
 const usernameEl = document.getElementById("username");
 const pwEl = document.getElementById("pw");
 const copyEl = document.getElementById("copy");
+const usernameLenEl = document.getElementById("username-len"); // Novo campo
 const lenEl = document.getElementById("len");
 const upperEl = document.getElementById("upper");
 const lowerEl = document.getElementById("lower");
@@ -20,7 +21,7 @@ function getRandomChar(set) {
 function generateUsername() {
   const chars = lowerLetters + upperLetters + numbers;
   let username = "";
-  const length = 10;
+  const length = usernameLenEl.value; // Usa o valor do campo de entrada
 
   for (let i = 0; i < length; i++) {
     username += getRandomChar(chars);
